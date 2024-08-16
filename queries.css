@@ -61,7 +61,12 @@
 
     .main-nav-list {
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 1.4rem;
+    }
+
+    .main-nav-list a {
+
+        font-size: 1.4rem;
     }
 }
 
