@@ -1,0 +1,76 @@
+@media (max-width: 550px) {
+    .container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        /* padding: 5px; */
+    }
+
+    .nav-btn {
+        display: block;
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .main-nav {
+
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s ease-out;
+
+        /* HIDING THE MENU */
+        /* allow no transition at all */
+
+        opacity: 0;
+
+        /* make link unaccesible to mouse and keyboard */
+        pointer-events: none;
+
+        /* make it invisible to user */
+        visibility: hidden;
+    }
+
+    .nav-open.main-nav {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 500;
+        height: 100vh;
+        transform: translateX(0);
+    }
+
+    .nav-open.nav-btn-close {
+        display: block;
+    }
+
+    .nav-open.nav-btn {
+        display: none;
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .main-nav {
+        max-width: 60%;
+    }
+
+    .main-nav-list a {
+        font-size: 10px;
+    }
+}
